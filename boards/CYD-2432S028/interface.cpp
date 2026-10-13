@@ -116,7 +116,7 @@ void _post_setup_gpio() {
     // Force sync color inversion to prevent bruceConf.json from overriding
     // the value set in _setup_gpio(). For CYD variants with TFT_INVERSION_ON,
     // the init() sequence sends INVON; we send INVOFF here to ensure normal colors.
-#ifdef TFT_INVERSION_ON
+#ifdef TFT_INVERSION_OFF
     bruceConfig.colorInverted = 0;
     tft.invertDisplay(0);
 #else
